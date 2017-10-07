@@ -6,12 +6,15 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
+import org.apache.logging.log4j.Logger;
 
 @Mod(
         modid = ArchitectureMod.MODID,
         name = ArchitectureMod.MODNAME,
         version = ArchitectureMod.VERSION,
-        dependencies = "required-after:Forge@[11.16.0.1965,)",
         useMetadata = true
 )
 public class ArchitectureMod
@@ -21,15 +24,29 @@ public class ArchitectureMod
     public static final String VERSION = "0.0.1";
 
     @SidedProxy(
-            clientSide = "mcjty.architecture.proxy.ClientProxy",
-            serverSide = "mcjty.architecture.proxy.ServerProxy"
+            clientSide = "com.github.architecture.proxy.ClientProxy",
+            serverSide = "com.github.architecture.proxy.ServerProxy"
     )
     public static CommonProxy proxy;
 
+    @Mod.Instance
+    public static ArchitectureMod instance;
+
+    public static Logger logger;
+
     @EventHandler
-    public void init(FMLInitializationEvent event)
-    {
-        // some example code
-        System.out.println("DIRT BLOCK >> "+Blocks.DIRT.getUnlocalizedName());
+    public void preInit(FMLPreInitializationEvent event) {
+        logger = event.getModLog();
+        proxy.preInit(event);
+    }
+
+    @EventHandler
+    public void init(FMLInitializationEvent event) {
+        proxy.init(event);
+    }
+
+    @EventHandler
+    public void postInit(FMLPostInitializationEvent event) {
+        proxy.postInit(event);
     }
 }
