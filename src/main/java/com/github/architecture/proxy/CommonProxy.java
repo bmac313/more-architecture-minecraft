@@ -1,7 +1,10 @@
 package com.github.architecture.proxy;
 
+import com.github.architecture.block.GrassSlab;
+import com.github.architecture.helpers.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -26,12 +29,12 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> e) {
-
+        e.getRegistry().register(new GrassSlab());
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> e) {
-
+        e.getRegistry().register(new ItemBlock(ModBlocks.grassSlab).setRegistryName(ModBlocks.grassSlab.getRegistryName()));
     }
 
 }
