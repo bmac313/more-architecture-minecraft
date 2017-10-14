@@ -12,6 +12,8 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import static com.github.architecture.helpers.ModBlocks.grassSlab;
+
 @Mod.EventBusSubscriber
 public class CommonProxy {
 
@@ -34,7 +36,7 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> e) {
-        e.getRegistry().register(new ItemBlock(ModBlocks.grassSlab).setRegistryName(ModBlocks.grassSlab.getRegistryName()));
+        e.getRegistry().register(new ItemBlock(grassSlab).setRegistryName(grassSlab.getRegistryName()));
     }
 
 }

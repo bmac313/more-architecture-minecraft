@@ -8,4 +8,8 @@ public class ModBlocks {
     @GameRegistry.ObjectHolder("architecture:grass_slab")
     public static GrassSlab grassSlab;
 
+    public static void initModels() {
+        grassSlab.initModel();
+    }
+
 }
