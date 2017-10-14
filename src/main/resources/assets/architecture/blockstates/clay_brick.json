@@ -1,0 +1,10 @@
+{
+  "forge_marker": 2,
+  "defaults": {
+    "model": "architecture:clay_brick"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}
