@@ -1,0 +1,10 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "architecture:grass_slab"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}
