@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "particle": "architecture:blocks/hardened_clay_bricks",
+    "all": "architecture:blocks/hardened_clay_bricks"
+  }
+}
