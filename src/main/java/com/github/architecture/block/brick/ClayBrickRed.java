@@ -1,4 +1,4 @@
-package com.github.architecture.block;
+package com.github.architecture.block.brick;
 
 import com.github.architecture.ArchitectureMod;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -7,12 +7,13 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ClayBrickHardened extends ClayBrick{
 
-    public ClayBrickHardened() {
+public class ClayBrickRed extends ClayBrick {
+
+    public ClayBrickRed() {
         super();
-        setUnlocalizedName(ArchitectureMod.MODID + ".clay_brick_hardened");
-        setRegistryName("clay_brick_hardened");
+        setUnlocalizedName(ArchitectureMod.MODID + ".clay_brick_red");
+        setRegistryName("clay_brick_red");
     }
 
     @SideOnly(Side.CLIENT)

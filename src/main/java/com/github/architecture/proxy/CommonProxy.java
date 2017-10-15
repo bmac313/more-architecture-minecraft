@@ -1,7 +1,9 @@
 package com.github.architecture.proxy;
 
 import com.github.architecture.block.*;
-import com.github.architecture.helpers.ModBlocks;
+import com.github.architecture.block.brick.ClayBrickHardened;
+import com.github.architecture.block.brick.ClayBrickPink;
+import com.github.architecture.block.brick.ClayBrickRed;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;

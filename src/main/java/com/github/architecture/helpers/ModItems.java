@@ -1,8 +1,8 @@
 package com.github.architecture.helpers;
 
-import com.github.architecture.block.ClayBrickHardened;
-import com.github.architecture.block.ClayBrickPink;
-import com.github.architecture.block.ClayBrickRed;
+import com.github.architecture.block.brick.ClayBrickHardened;
+import com.github.architecture.block.brick.ClayBrickPink;
+import com.github.architecture.block.brick.ClayBrickRed;
 import com.github.architecture.block.GrassSlab;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;

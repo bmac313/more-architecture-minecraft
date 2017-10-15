@@ -1,4 +1,4 @@
-package com.github.architecture.block;
+package com.github.architecture.block.brick;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
