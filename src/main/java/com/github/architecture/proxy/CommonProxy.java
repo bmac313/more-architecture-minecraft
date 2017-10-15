@@ -1,9 +1,6 @@
 package com.github.architecture.proxy;
 
-import com.github.architecture.block.ClayBrick;
-import com.github.architecture.block.ClayBrickPink;
-import com.github.architecture.block.ClayBrickRed;
-import com.github.architecture.block.GrassSlab;
+import com.github.architecture.block.*;
 import com.github.architecture.helpers.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -15,9 +12,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import static com.github.architecture.helpers.ModBlocks.clayBrickPink;
-import static com.github.architecture.helpers.ModBlocks.clayBrickRed;
-import static com.github.architecture.helpers.ModBlocks.grassSlab;
+import static com.github.architecture.helpers.ModBlocks.*;
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
@@ -39,6 +34,7 @@ public class CommonProxy {
         e.getRegistry().register(new GrassSlab());
         e.getRegistry().register(new ClayBrickRed());
         e.getRegistry().register(new ClayBrickPink());
+        e.getRegistry().register(new ClayBrickHardened());
     }
 
     @SubscribeEvent
@@ -46,6 +42,7 @@ public class CommonProxy {
         e.getRegistry().register(new ItemBlock(grassSlab).setRegistryName(grassSlab.getRegistryName()));
         e.getRegistry().register(new ItemBlock(clayBrickRed).setRegistryName(clayBrickRed.getRegistryName()));
         e.getRegistry().register(new ItemBlock(clayBrickPink).setRegistryName(clayBrickPink.getRegistryName()));
+        e.getRegistry().register(new ItemBlock(clayBrickHardened).setRegistryName(clayBrickHardened.getRegistryName()));
     }
 
 }

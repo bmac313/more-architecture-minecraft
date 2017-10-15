@@ -1,5 +1,6 @@
 package com.github.architecture.helpers;
 
+import com.github.architecture.block.ClayBrickHardened;
 import com.github.architecture.block.ClayBrickPink;
 import com.github.architecture.block.ClayBrickRed;
 import com.github.architecture.block.GrassSlab;
@@ -18,11 +19,15 @@ public class ModItems {
     @GameRegistry.ObjectHolder("architecture:clay_brick_pink")
     public static ClayBrickPink clayBrickPink;
 
+    @GameRegistry.ObjectHolder("architecture:clay_brick_hardened")
+    public static ClayBrickHardened clayBrickHardened;
+
     @SideOnly(Side.CLIENT)
     public static void initModels() {
         grassSlab.initModel();
         clayBrickRed.initModel();
         clayBrickPink.initModel();
+        clayBrickHardened.initModel();
     }
 
 }
